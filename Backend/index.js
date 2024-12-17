@@ -12,7 +12,7 @@ app.use(express.json());
 
 
 const corsOptions = {
-    origin: '*',
+    origin: 'https://kotech-solution-g7ia.vercel.app/',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
     allowedHeaders: 'Content-Type, Authorization, X-Requested-With'
