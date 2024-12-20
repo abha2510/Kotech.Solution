@@ -12,12 +12,13 @@ app.use(express.json());
 
 
 const corsOptions = {
-    origin: 'https://kotech-solution-g7ia.vercel.app',
+    origin: ['https://kotech-solution-g7ia.vercel.app', 'http://localhost:3000'],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
     allowedHeaders: 'Content-Type, Authorization, X-Requested-With'
 };
 app.use(cors(corsOptions));
+
 
 const server = http.createServer(app);
 const io = new Server(server, {
